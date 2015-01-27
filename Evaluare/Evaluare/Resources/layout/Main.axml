@@ -1,149 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp">
+    android:layout_height="fill_parent">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Rata metabolică de bază"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_marginRight="0.0dp"
+                android:layout_weight="1" />
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rmb"
+                android:minWidth="100dp"
+                android:layout_weight="1" />
+            <ToggleButton
+                android:id="@+id/sex_togglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="M"
+                android:textOn="F"
+                android:maxWidth="10dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Efort fizic"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_marginRight="0.0dp"
+                android:layout_weight="1" />
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hEfort"
+                android:minWidth="100dp"
+                android:layout_weight="1" />
+            <ToggleButton
+                android:id="@+id/efort_togglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="Mediu (200)"
+                android:textOn="Intens (300)" />
+        </LinearLayout>
         <TextView
-            android:text="Rata metabolică de bază"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Rata metabolică activă: --"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rma" />
+        <TextView
+            android:text="Rata metabolică totală: --"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rmt" />
+        <TextView
+            android:text="Slăbire: --"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/m500" />
+        <TextView
+            android:text="Creșterea greutății: --"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/p500" />
+        <Button
+            android:id="@+id/myButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcul rată metabolică totală"
+            android:maxHeight="30dp"
+            android:layout_marginTop="14.4dp"
+            android:layout_marginBottom="15dp" />
+    <!-- Second section -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView1"
-            android:layout_marginRight="0.0dp"
-            android:layout_weight="1" />
-        <EditText
-            android:inputType="numberDecimal"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Greutatea "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_marginRight="0.0dp"
+                android:layout_weight="1" />
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/greutatea"
+                android:minWidth="100dp"
+                android:layout_weight="1" />
+            <TextView
+                android:text=" (kg)"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_marginRight="0.0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/rmb"
-            android:minWidth="100dp"
-            android:layout_weight="1" />
-        <ToggleButton
-            android:id="@+id/sex_togglebutton"
+            android:orientation="horizontal">
+            <TextView
+                android:text="% Grăsime "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_marginRight="0.0dp"
+                android:layout_weight="1" />
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/grasime"
+                android:minWidth="100dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textOff="M"
-            android:textOn="F"
-            android:maxWidth="10dp" />
+            android:orientation="horizontal">
+            <TextView
+                android:text="Masa musculară "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_marginRight="0.0dp"
+                android:layout_weight="1" />
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/m_musculara"
+                android:minWidth="100dp"
+                android:layout_weight="1" />
+            <TextView
+                android:text=" (kg)"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_marginRight="0.0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <TextView
+            android:text="Grăsime (kg): --"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/grasime_out" />
+        <TextView
+            android:text="% Masă musculară: --"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/m_musculara_out" />
+        <Button
+            android:id="@+id/myButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grăsime și masă musculară"
+            android:maxHeight="30dp"
+            android:layout_marginTop="14.4dp"
+            android:layout_marginBottom="15dp" />
+    <!-- Third section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="IMC "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_marginRight="0.0dp"
+                android:layout_weight="1" />
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imc"
+                android:minWidth="100dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Înălțime "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_marginRight="0.0dp"
+                android:layout_weight="1" />
+            <EditText
+                android:inputType="numberDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/height"
+                android:minWidth="100dp"
+                android:layout_weight="1" />
+            <TextView
+                android:text=" (cm)"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_marginRight="0.0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <TextView
+            android:text="Factor proteic: --"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/proteic" />
+        <Button
+            android:id="@+id/myButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcul factor proteic"
+            android:maxHeight="30dp"
+            android:layout_marginTop="14.4dp" />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:text="Efort fizic"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:layout_marginRight="0.0dp"
-            android:layout_weight="1" />
-        <EditText
-            android:inputType="numberDecimal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/hEfort"
-            android:minWidth="100dp"
-            android:layout_weight="1" />
-        <ToggleButton
-            android:id="@+id/efort_togglebutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textOff="Mediu (200)"
-            android:textOn="Intens (300)" />
-    </LinearLayout>
-    <TextView
-        android:text="Rata metabolică activă: --"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rma" />
-    <TextView
-        android:text="Rata metabolică totală: --"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rmt" />
-    <TextView
-        android:text="Slăbire: --"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/m500" />
-    <TextView
-        android:text="Creșterea greutății: --"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/p500" />
-    <Button
-        android:id="@+id/myButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calcul rată metabolică totală"
-        android:maxHeight="30dp"
-        android:layout_marginTop="14.4dp"
-        android:layout_marginBottom="36.7dp" />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:text="IMC "
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView1"
-            android:layout_marginRight="0.0dp"
-            android:layout_weight="1" />
-        <EditText
-            android:inputType="numberDecimal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imc"
-            android:minWidth="100dp"
-            android:layout_weight="1" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:text="Înălțime "
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView1"
-            android:layout_marginRight="0.0dp"
-            android:layout_weight="1" />
-        <EditText
-            android:inputType="numberDecimal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/height"
-            android:minWidth="100dp"
-            android:layout_weight="1" />
-        <TextView
-            android:text=" (cm)"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView1"
-            android:layout_marginRight="0.0dp"
-            android:layout_weight="1" />
-    </LinearLayout>
-    <TextView
-        android:text="Factor proteic: --"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/proteic" />
-    <Button
-        android:id="@+id/myButton2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calcul factor proteic"
-        android:maxHeight="30dp"
-        android:layout_marginTop="14.4dp" />
-</LinearLayout>
+</ScrollView>

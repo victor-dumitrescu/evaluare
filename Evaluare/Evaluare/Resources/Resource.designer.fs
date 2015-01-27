@@ -23,10 +23,10 @@ namespace Evaluare
     #nowarn "51" // address-of operator can occur in the code
     #nowarn "1183" // unused 'this' reference
     
-    exception ReturnException732363b0a9af44f1854f304790d5e754 of obj
-    exception ReturnNoneException732363b0a9af44f1854f304790d5e754
+    exception ReturnException93e5a786a532422f806df8ef20f3decd of obj
+    exception ReturnNoneException93e5a786a532422f806df8ef20f3decd
     [<AutoOpen>]
-    module FuncConvertFinalOverload732363b0a9af44f1854f304790d5e754 =
+    module FuncConvertFinalOverload93e5a786a532422f806df8ef20f3decd =
       // This extension member adds to the FuncConvert type and is the last resort member in the method overloading rules. 
       type global.Microsoft.FSharp.Core.FuncConvert with
           /// A utility function to convert function values from tupled to curried form
@@ -68,29 +68,47 @@ namespace Evaluare
             // aapt resource value: 0x7f050005
             static member efort_togglebutton = 2131034117
             
+            // aapt resource value: 0x7f05000c
+            static member grasime = 2131034124
+            
+            // aapt resource value: 0x7f05000e
+            static member grasime_out = 2131034126
+            
+            // aapt resource value: 0x7f05000b
+            static member greutatea = 2131034123
+            
             // aapt resource value: 0x7f050004
             static member hEfort = 2131034116
             
-            // aapt resource value: 0x7f05000c
-            static member height = 2131034124
+            // aapt resource value: 0x7f050012
+            static member height = 2131034130
             
-            // aapt resource value: 0x7f05000b
-            static member imc = 2131034123
+            // aapt resource value: 0x7f050011
+            static member imc = 2131034129
             
             // aapt resource value: 0x7f050008
             static member m500 = 2131034120
             
+            // aapt resource value: 0x7f05000d
+            static member m_musculara = 2131034125
+            
+            // aapt resource value: 0x7f05000f
+            static member m_musculara_out = 2131034127
+            
             // aapt resource value: 0x7f05000a
             static member myButton = 2131034122
             
-            // aapt resource value: 0x7f05000e
-            static member myButton2 = 2131034126
+            // aapt resource value: 0x7f050014
+            static member myButton2 = 2131034132
+            
+            // aapt resource value: 0x7f050010
+            static member myButton3 = 2131034128
             
             // aapt resource value: 0x7f050009
             static member p500 = 2131034121
             
-            // aapt resource value: 0x7f05000d
-            static member proteic = 2131034125
+            // aapt resource value: 0x7f050013
+            static member proteic = 2131034131
             
             // aapt resource value: 0x7f050006
             static member rma = 2131034118

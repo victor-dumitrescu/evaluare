@@ -76,6 +76,23 @@ type MainActivity() =
                 Toast.MakeText(this, "Date incomplete", ToastLength.Short).Show()
             )
 
+        let greutate_edittext = this.FindViewById<EditText>(Resource_Id.greutatea)
+        let grasime_edittext = this.FindViewById<EditText>(Resource_Id.grasime)
+        let mmusculara_edittext = this.FindViewById<EditText>(Resource_Id.m_musculara)
+        let out_grasime = this.FindViewById<TextView>(Resource_Id.grasime_out)
+        let out_mmusculara = this.FindViewById<TextView>(Resource_Id.m_musculara_out)
+
+        let button3 = this.FindViewById<Button>(Resource_Id.myButton3)
+        button3.Click.Add(fun args -> 
+                if not (String.IsNullOrEmpty greutate_edittext.Text || String.IsNullOrEmpty grasime_edittext.Text || String.IsNullOrEmpty mmusculara_edittext.Text) then
+                    match float grasime_edittext.Text with
+                    | p when p >= 0.0 && p <= 100.0 -> out_grasime.Text <- sprintf "%s %d" "Grăsime (kg):             " (p * (float greutate_edittext.Text) / 100.0 |> int)
+                    | _ -> Toast.MakeText(this, "Procentajul de grăsime trebuie să fie în intervalul 0 - 100", ToastLength.Long).Show()
+                    out_mmusculara.Text <- sprintf "%s %d" "% Masă musculară: " ((float mmusculara_edittext.Text) * 100.0 / (float greutate_edittext.Text) |> int)
+                else
+                    Toast.MakeText(this, "Date incomplete", ToastLength.Short).Show()
+                )
+
         let imc_edittext = this.FindViewById<EditText>(Resource_Id.imc)
         let height_edittext = this.FindViewById<EditText>(Resource_Id.height)
         let out_proteic = this.FindViewById<TextView>(Resource_Id.proteic)
